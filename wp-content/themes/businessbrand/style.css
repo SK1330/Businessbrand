@@ -1,0 +1,1704 @@
+/*
+Theme Name: Businessbrand
+Author: Astron Web Solutions
+Author URI: https://astronweb.com/
+Description: Custom Theme For Businessbrand.online
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/* Apply box-sizing border-box to all elements */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+:root {
+    --text-color-black: #000000;
+    --background-color: #ffffff;
+    --primary-text-color: #747474;
+    --secondary-text-color: #D9D9D9;
+    --button-bg-color: #E8E3E3;
+    --global-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+/* Reset margin and padding for all elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dd,
+dt,
+figure,
+figcaption,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set container width to 1400px */
+.container {
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.spacer-margin {
+    margin-bottom: 120px;
+}
+
+/* Update Bootstrap container width */
+@media (min-width: 1200px) {
+    .container {
+        /* max-width: 1400px; */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .col,
+    .col-1,
+    .col-10,
+    .col-11,
+    .col-12,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-auto,
+    .col-lg,
+    .col-lg-1,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-auto,
+    .col-md,
+    .col-md-1,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-auto,
+    .col-sm,
+    .col-sm-1,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-auto,
+    .col-xl,
+    .col-xl-1,
+    .col-xl-10,
+    .col-xl-11,
+    .col-xl-12,
+    .col-xl-2,
+    .col-xl-3,
+    .col-xl-4,
+    .col-xl-5,
+    .col-xl-6,
+    .col-xl-7,
+    .col-xl-8,
+    .col-xl-9,
+    .col-xl-auto {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* Unordered list styles */
+ul,
+li,
+dl {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.padding-xy {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+body {
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+}
+
+/* ------------------- */
+/* Customize video container to make it full-screen and full-width */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    min-height: 800px;
+}
+
+/* Ensure video fills entire container */
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ensure equal height for columns */
+.equal-height-columns .card {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;
+    border: none;
+    box-shadow: var(--global-box-shadow);
+}
+
+/* Cover images for cards */
+.card-Ujjivan {
+    background-image: url(images/homepage/Ujjivan_tile.webp);
+    width: 100%;
+}
+
+.card-Xumpe {
+    background-image: url(images/homepage/Xumpe_final_draft.webp);
+}
+
+.card-Oakshine {
+    background-image: url(images/homepage/oakshine.webp);
+    /* width: 100%; */
+}
+
+.card-hrhood {
+    background-image: url(images/homepage/hr_hood_tile.webp);
+}
+
+.card-contactCard {
+    background-image: url(images/homepage/Enquiries_tile.webp);
+}
+
+.card-Aadat-Sanskar {
+    background-image: url(images/homepage/aadat_sanskar.webp);
+}
+
+.card-Nebarrio {
+    background-image: url(images/homepage/nebarrio_new.webp);
+}
+
+.card-buznezz {
+    background-image: url(images/homepage/buznezz.webp);
+}
+
+.card-nokia {
+    background-image: url(images/homepage/nokia_tile.webp);
+}
+
+.card-Vinda {
+    background-image: url(images/homepage/Vinda.webp);
+}
+
+.card-banks-rebranding {
+    background-image: url(images/homepage/bank_rebranding_tile.webp);
+}
+
+.card-almodox {
+    background-image: url(images/homepage/Almodox.webp);
+}
+
+.card-works {
+    background-image: url(images/homepage/work_final_draft.webp);
+}
+
+/* Card Body Css */
+.card-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: 300ms ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card-title {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--background-color);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms ease-out;
+}
+
+.card .card-text {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-family: "Just Me Again Down Here", cursive;
+    ;
+    font-size: 2rem;
+    color: var(--background-color);
+    font-weight: 400;
+    transition: 300ms ease-out;
+}
+
+/* Card Hover Effect */
+.card:hover .card-title {
+    display: flex;
+}
+
+.card:hover .card-body {
+    opacity: 0.9;
+}
+
+/* Businessbrand Main Footer Css*/
+
+.main-footer {
+    padding: 40px 0;
+    background-color: black;
+    border-bottom: 0.5px solid #747474;
+}
+
+.main-footer .contact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-footer .contact button {
+    padding: 8px;
+    width: 165px;
+    border: 1px solid #DFDFDF;
+    border-radius: 32px;
+    font-size: 1rem;
+    color: var(--background-color);
+}
+
+.main-footer .contact .our-work-button {
+    margin-right: 20px;
+}
+
+.main-footer .footer-text p {
+    color: #D9D9D9;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.copyright-container {
+    background: black;
+    padding: 40px 0;
+}
+
+.copyright-text {
+    font-size: 1.125rem;
+    color: #747474;
+}
+
+.copyright-text a {
+    font-size: 1.125rem;
+    color: #747474;
+}
+
+.footer_social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.footer_social li {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #D9D9D9;
+}
+
+.footer_social li:nth-child(2) {
+    margin: 0 40px;
+}
+
+.footer_social a {
+    display: block;
+    color: #d9d9d9;
+}
+
+
+.our_work_single_entry_content .gallery-grid {
+    display: flex;
+}
+
+.our_work_single_entry_content .gallery-item {
+    width: 100%;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.our_work_single_entry_content .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Homepage Main Header CSS */
+
+
+#menu__toggle {
+    opacity: 0;
+    position: absolute;
+}
+
+#menu__toggle:checked+.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    right: 0 !important;
+}
+
+.menu__btn {
+    position: fixed;
+    top: 48px;
+    right: 48px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 701;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #000000;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    z-index: 700;
+    opacity: 0.9;
+}
+
+ul#menu-homepage-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul#menu-homepage-menu .menu-link {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 34px;
+    display: block;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+
+#menu-homepage-menu {
+    text-align: center;
+}
+
+#menu-homepage-menu li {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--background-color);
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 921px) {
+    .site-header-primary-section-right.site-header-section.ast-flex.ast-grid-right-section {
+        display: none !important;
+    }
+
+    .menu__btn {
+        top: 35px;
+        right: 35px;
+        width: 26px;
+        height: 26px;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+}
+
+@media only screen and (min-width:921px) {
+    .site-footer .ast-builder-grid-row-3-equal .ast-builder-grid-row {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.menu__btn:before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: #121212;
+    position: absolute;
+    top: -23px;
+    right: -12px;
+    border-radius: 50%;
+    animation: growAndPulse 2s ease infinite;
+}
+
+@keyframes growAndPulse {
+    0% {
+        transform: scale(0);
+        background-color: #121212;
+    }
+
+    25% {
+        transform: scale(1);
+        background-color: #121212;
+    }
+
+    50%,
+    100% {
+        transform: scale(1.1);
+        background-color: rgba(18, 18, 18, 0.4);
+    }
+
+}
+
+
+/*-------------- Header Inner CSS ------------- */
+.navbar-inner-white {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: #fafafa;
+    z-index: 10;
+    height: 100px;
+    box-shadow: var(--global-box-shadow);
+    position: fixed;
+    top: 0;
+    transition: top 0.3s ease;
+    width: 100%;
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s ease;
+}
+
+.hidden-header {
+    top: -100px;
+}
+
+
+#navbarSupportedContent .navbar-nav {
+    gap: 20px;
+    padding: 40px 0px;
+    flex-direction: row;
+}
+
+#navbarSupportedContent a {
+    font-size: 0.875rem;
+    color: var(--text-color-black);
+    padding: 10px 16px;
+    border-radius: 32px;
+    background-color: #E8E3E3;
+    transition: 100ms ease-out;
+}
+
+#navbarSupportedContent a:hover {
+    color: var(--background-color);
+    background-color: var(--text-color-black);
+}
+
+.navbar-inner-white .hamburger-menu {
+    display: none;
+}
+
+#menu-homepage-menu a {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--background-color);
+    margin-bottom: 20px;
+    padding: unset;
+    border-radius: unset;
+    background-color: transparent;
+    transition: none;
+}
+
+/* ------------------------Our Work Lisitng page css------------------------ */
+.our_work-template-default .site-main {
+    padding-bottom: 30px;
+}
+
+.our_work_single_cover_image .widget_media_image img {
+    width: 100%;
+}
+
+.our-work-card-img-top .wp-post-image {
+    width: 100%;
+    height: 350px;
+    max-height: 380px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.our_work_card-body {
+    background-color: #EDEBEB;
+}
+
+.our_work_card-body h2 {
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid var(--primary-text-color);
+}
+
+.our_work_card-body a {
+    color: var(--text-color-black);
+    font-size: 1.5rem;
+}
+
+.our_work_card_text {
+    /* max-height: 0; */
+    /* overflow: hidden; */
+    transition: 700ms ease-in-out;
+    font-size: 0.875rem;
+    color: var(--primary-text-color);
+}
+
+.our_work_card_text p {
+    padding: 12px 24px;
+}
+
+
+
+
+/* -----------------------Site Origin Single Our Work Page CSS ------------------*/
+/* .our_work_top_image img {
+    width: 100%;
+    height: 100vh !important;
+    min-height: 100vh;
+    object-fit: cover;
+    object-position: center;
+} */
+
+/* .project_content p strong {
+    font-weight: 600;
+} */
+
+.project_content p {
+    padding: 40px;
+    background-color: #F6F2F2;
+    font-size: 1.5rem;
+}
+
+
+/* ------------------------Our Work Single page CSS ------------------------*/
+
+/* All the images on single our work page */
+.images_row .panel-grid-cell {
+    height: 650px;
+}
+
+.images_row .widget_media_image {
+    height: 650px;
+}
+
+.images_row .panel-grid-cell img {
+    max-height: 650px;
+    object-fit: cover;
+    height: 100% !important;
+}
+
+/* ----------------------------Case Studies Listing Page CSS----------------------------- */
+
+.case-study-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+.caseStudy_inner_content {
+    background-color: #EDEBEB;
+}
+
+.caseStudy_inner_content .entry-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 12px;
+    border-bottom: 0.5px solid var(--primary-text-color);
+    color: var(--text-color-black);
+}
+
+.caseStudy_inner_content p {
+    padding: 12px 24px;
+    font-size: 0.875rem;
+    color: var(--primary-text-color);
+}
+
+/* ---------------------- Case Study Single Templates CSS ------------------- */
+
+.single-case_study blockquote{
+    margin: 40px;
+    margin-left: 2rem;
+    padding: 1.5rem;
+    box-shadow: var(--global-box-shadow);
+}
+.single-case_study blockquote p:first-child {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text-color-black);
+    margin-bottom: 12px;
+}
+.single-case_study blockquote p:nth-child(2){
+    font-size: 0.875rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #008B50;
+}
+.case_study_cover img {
+    width: 100% !important;
+
+}
+
+.tocWithContent{
+    position: relative;
+    margin-bottom: 40px;
+}
+.tocWithContent > div:first-child{
+    position: sticky;
+    top: 0;
+}
+/* TOC CSS */
+#toc_container{
+    padding-top: 90px;
+}
+.toc_title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color-black);
+    margin-bottom: 20px;
+}
+.toc_list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.toc_list li:hover{
+    text-decoration: underline;
+}
+
+
+
+.single-case_study h2 {
+    margin-top: -70px;
+    /* Adjust this value if needed */
+    padding-top: 70px;
+    margin-bottom: 8px;
+}
+
+.single-case_study p {
+    font-size: 1rem;
+    color: var(--primary-text-color);
+}
+.single-case_study p:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+.case-study-single-firsteditor p {
+    font-size: 1rem;
+    color: var(--text-color-black);
+}
+.widget_sow-editor{
+    margin-bottom: 40px;
+}
+
+/* --------------------Footer Newletter CSS--------------------------- */
+.newsletter_block {
+    display: flex;
+    padding-right: 0;
+    align-items: center;
+    font-size: 1rem;
+    color: #AFAFAF;
+    font-weight: 700;
+}
+
+.newsletter_block p {
+    margin-right: 20px;
+}
+
+.businessbrand_newsletter {
+    display: flex;
+}
+
+.newsletter-input-container {
+    display: flex;
+    border-radius: 32px;
+    overflow: hidden;
+    border: 1px solid #DFDFDF;
+}
+
+.businessbrand_newsletter input[type="email"] {
+    flex: 1;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 32px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: transparent;
+}
+
+.businessbrand_newsletter button[type="submit"] {
+    background-color: #D9D9D9;
+    color: var(--text-color-black);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.businessbrand_newsletter button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.businessbrand_newsletter button[type="submit"] i {
+    font-size: 16px;
+}
+
+/* --------------Pop-up Contact form CSS-------------- */
+/* Modal styles for contact form */
+.contact-form-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 800;
+}
+
+.contact-form-modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: slideInRight 0.5s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-modal-inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-form-close {
+    color: var(--primary-text-color);
+    font-size: 28px;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.contact-form-close:hover,
+.contact-form-close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+@keyframes slideInRight {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.contact-form-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Labels */
+.wpcf7 label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--primary-text-color);
+}
+
+/* Input Fields */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    margin-bottom: 15px;
+    background-color: #F5F5F5;
+    color: var(--primary-text-color);
+}
+
+.wpcf7 textarea {
+    height: 90px;
+}
+
+/* Two Column Layout for First and Last Name */
+.wpcf7 .contact_userName {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wpcf7 .contact_userName p {
+    width: 48%;
+}
+
+/* Highlight invalid fields */
+.wpcf7 form.invalid .wpcf7-not-valid {
+    border-color: rgb(255, 74, 74);
+}
+
+/* Submit Button */
+.wpcf7 input[type="submit"] {
+    color: var(--primary-text-color);
+    border: 1px solid var(--primary-text-color);
+    padding: 12px 36px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+}
+
+.wpcf7 input[type="submit"]:hover {
+    background-color: #F5F5F5;
+}
+
+/* Form Heading */
+.form-heading {
+    margin-bottom: 8px;
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    font-weight: 700;
+}
+
+/* Form description*/
+.form-description {
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    color: var(--primary-text-color);
+}
+
+/* Focused State for Input Fields */
+.wpcf7 input[type="text"]:focus-visible,
+.wpcf7 input[type="email"]:focus-visible,
+.wpcf7 textarea:focus {
+    border-color: var(--primary-text-color);
+    background-color: #F5F5F5;
+    box-shadow: var(--global-box-shadow);
+    outline: none;
+    background-color: #fff;
+}
+
+/* thank You pop-up */
+
+/* Popup Container */
+#cf7-popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Popup Overlay */
+#cf7-popup-overlay {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Close Button */
+#cf7-popup .close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cf7-popup .close-btn:hover {
+    background-color: #005177;
+}
+
+/* ----------------end------------------------ */
+
+
+
+/* #contact-form-container .contact_userName {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+} */
+
+/* #contact-form-container label {
+    width: 100%;
+} */
+
+/* #contact-form-container textarea.wpcf7-form-control.wpcf7-textarea {
+    height: 100px;
+} */
+
+/* .wpcf7-form p {
+    margin: 0 0 18px;
+}
+
+.wpcf7-text:focus,
+.wpcf7-textarea:focus {
+    outline: 1px solid var(--primary-text-color);
+    outline-offset: 0;
+}
+
+.wpcf7-form .button {
+    background-color: transparent;
+    border: 1px solid var(--primary-text-color);
+    color: var(--primary-text-color);
+    border-radius: 32px;
+    text-align: center;
+    width: auto;
+    padding: 8px 32px;
+    font-size: 0.875rem;
+}
+
+.wpcf7-form .button:hover {
+    cursor: pointer;
+}
+
+div.wpcf7-mail-sent-ok {
+    border: 0;
+    background: #5471de;
+    color: #fff;
+    padding: 18px;
+}
+
+div.wpcf7-acceptance-missing,
+div.wpcf7-validation-errors {
+    border: 0;
+    background: #f9443b;
+    color: #fff;
+    padding: 18px;
+}
+
+span.wpcf7-not-valid-tip {
+    color: #f9443b;
+} */
+
+/* 
+** Contact Form 7 Styles 
+*/
+
+/* .wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="url"],
+.wpcf7-form input[type="password"],
+.wpcf7-form input[type="search"],
+.wpcf7-form input[type="number"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea {
+    color: var(--text-color-black);
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 0;
+    border: 0;
+    background-color: #EDEBEB;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.wpcf7-form p {
+    margin: 0 0 28px;
+}
+
+.wpcf7-text:focus,
+.wpcf7-textarea:focus {
+    outline: 1px solid var(--primary-text-color);
+    outline-offset: 0;
+}
+
+div.wpcf7-mail-sent-ok {
+    border: 0;
+    background: #5471de;
+    color: #fff;
+    padding: 18px;
+}
+
+div.wpcf7-acceptance-missing,
+div.wpcf7-validation-errors {
+    border: 0;
+    background: #f9443b;
+    color: #fff;
+    padding: 18px;
+}
+
+span.wpcf7-not-valid-tip {
+    color: #f9443b;
+} */
+
+
+
+/* ----------------404 page css ------------------- */
+
+.page-404 .page-header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.page-404 .page-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.page-404 .page-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-404 .page-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.page-404 .page-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none;
+}
+
+.page-404 .page-content a:hover {
+    background-color: #005177;
+}
+
+
+/*  ---------- Oakshine Page CSS-------------------*/
+.oakshine_cover_grid {
+    display: flex;
+    gap: 20px;
+}
+
+:is(.column_one, .column_two, .column_three) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.oakshine_cover_grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s;
+}
+
+.oakshine_cover_grid img:hover {
+    transform: scale(1.1);
+}
+
+.oakshine_cover_grid .image_one {
+    max-height: 410px;
+    overflow: hidden;
+}
+
+.oakshine_cover_grid .image_two {
+    max-height: 323px;
+    overflow: hidden;
+}
+
+.oakshine_cover_grid .image_three {
+    max-height: 440px;
+    overflow: hidden;
+}
+
+.oakshine_cover_grid .image_four {
+    max-height: 217px;
+    overflow: hidden;
+}
+
+.oakshine_cover_grid .image_five {
+    max-height: 304px;
+    overflow: hidden;
+}
+
+.oakshine_cover_grid .image_six {
+    max-height: 187px;
+    overflow: hidden;
+}
+
+.OurBrandingServices h2 {
+    margin: 40px auto 0px;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.aboutServiceSection .service_content {
+    margin: 40px auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    font-size: 1.125rem;
+}
+
+.service_name {
+    color: #008B50;
+    font-weight: 600;
+}
+
+/* ------------Services Cards for oakshine and buzznez---------- */
+.services-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0px;
+}
+
+.service-column {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    flex-grow: 1;
+}
+
+.service-card:hover {
+    background-color: #F8F9FA;
+}
+
+.service-card-icon {
+    max-width: 100px;
+    margin: 0 auto 40px;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.service-title {
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d8643;
+}
+
+.service-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-content p {
+    font-size: 0.875rem;
+}
+
+.oakshine-video.video-js {
+    width: 100%;
+    min-height: 600px;
+}
+
+.oakshine-cta h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 40px auto;
+}
+
+span#openModal {
+    color: var(--background-color);
+    background-color: #008B50;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+
+/*  -------------- Buznezz Page Css -----------------*/
+
+.buzznez_page_wrapper {
+    overflow: hidden;
+}
+
+.buzznezz_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 750px;
+    background: url(images/Buzznez/Buzznez_home_cover.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.buzznez_content h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.buzznez_content p {
+    font-size: 2rem;
+    width: 50%;
+    margin: auto;
+}
+
+.custom-shape-divider-bottom-1717267998 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1717267998 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 72px;
+}
+
+.custom-shape-divider-bottom-1717267998 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.buzznez_banner_left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buzznez_desc {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.branding_mockup {
+    margin: 40px auto;
+}
+
+.branding_mockup .video-js {
+    width: 100%;
+    min-height: 600px;
+}
+
+.branding_mockup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buzznez_desc_para {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 40px auto;
+}
+
+.buzznez_subscription_container {
+    padding: 40px;
+    background-color: rgba(0, 140, 80, .1);
+}
+
+.buzznez_subscription {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    margin: auto;
+}
+
+.buzznez_subscription h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+}
+
+.buzznez_subscription_inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.buzznez-cta h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 40px auto;
+}
+
+span#openModal {
+    color: var(--background-color);
+    background-color: #008B50;
+}
+
+
+/*  */
+@media (max-width: 993px) {
+
+
+    /*------------ Header Inner Css-------------- */
+    .navbar-inner-white {
+        height: 100px;
+    }
+
+    .navbar-inner-white #menu-primary-menu {
+        display: none;
+    }
+
+    .navbar-inner-white .hamburger-menu {
+        display: block;
+    }
+}
+
+
+/*---------------------- Css For Mobile Device  ------------------*/
+@media (max-width: 768px) {
+
+
+    /*------------ Header Inner Css-------------- */
+    .navbar-inner-white {
+        height: 80px;
+    }
+
+    .spacer-margin {
+        margin-bottom: 100px;
+    }
+
+    .navbar-inner-white #menu-primary-menu {
+        display: none;
+    }
+
+    .navbar-inner-white .hamburger-menu {
+        display: block;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* -------Footer CSS---------- */
+    .main-footer .row {
+        flex-direction: column;
+    }
+
+    .footer-text {
+        margin: 20px 0px;
+    }
+
+    .main-footer .contact {
+        justify-content: start;
+    }
+
+
+    /* footer copyright section */
+    .copyright-container .row {
+        flex-direction: column;
+    }
+
+    .footer_social {
+        justify-content: start;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* ----- Buzznex Page Mobile CSS ------------ */
+    .buzznezz_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: max-content;
+        padding: 40px 0px;
+    }
+
+    .buzznez_content h1 {
+        font-size: 3rem;
+    }
+
+    .buzznez_content p {
+        width: 70%;
+        font-size: 1.2rem;
+    }
+
+    .buzznez_subscription {
+        width: 90%;
+    }
+
+    /* All the images on single our work page */
+    .images_row .panel-grid-cell {
+        height: unset;
+    }
+
+    .images_row .widget_media_image {
+        height: unset;
+    }
+
+    .images_row .panel-grid-cell img {
+        max-height: unset;
+        object-fit: cover;
+        height: 100% !important;
+    }
+
+    /* Contact form first row */
+    .contact-form-modal-content {
+        display: flex;
+        align-items: start;
+    }
+
+    .wpcf7 .contact_userName {
+        flex-direction: column;
+    }
+
+    .wpcf7 .contact_userName p {
+        width: 100%;
+    }
+
+    /* TOC */
+    .tocWithContent > div:first-child{
+        position: relative;
+    }
+    /* TOC CSS */
+    #toc_container{
+        padding-top: 0px;
+    }
+}
+
+/* Strictly for smaller devices */
+
+@media (max-width: 576px) {
+
+    /* Buzznez page css */
+    .buzznezz_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: max-content;
+        padding: 30px 0px;
+    }
+
+    .newsletter_block {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 8px;
+    }
+
+    .branding_mockup .video-js {
+        min-height: unset;
+    }
+
+    .oakshine-video.video-js {
+        min-height: unset;
+    }
+}

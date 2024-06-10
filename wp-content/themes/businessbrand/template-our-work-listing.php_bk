@@ -1,0 +1,53 @@
+<?php
+/*
+ * Template Name: Our Work Listing
+ * Description: A custom template for displaying the listing of "Our Work" posts.
+ */
+
+get_header();
+?>
+
+<div id="primary" class="content-area container">
+    <main id="main" class="site-main">
+
+        <?php if ( have_posts() ) : ?>
+
+            <header class="page-header">
+                <h1 class="page-title"><?php _e( 'Our Work', 'text_domain' ); ?></h1>
+            </header><!-- .page-header -->
+
+            <div class="work-grid">
+                <div class="row">
+                    <?php while ( have_posts() ) : the_post(); ?>
+                        <div class="col-md-3">
+                            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                <header class="entry-header">
+                                    <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                                    <?php the_excerpt(); ?>
+                                </div><!-- .entry-content -->
+
+                                <footer class="entry-footer">
+                                    <?php echo get_the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
+                                </footer><!-- .entry-footer -->
+                            </article><!-- #post-<?php the_ID(); ?> -->
+                        </div><!-- .col-md-3 -->
+                    <?php endwhile; ?>
+                </div><!-- .row -->
+            </div><!-- .work-grid -->
+
+            <?php the_posts_pagination(); ?>
+
+        <?php else : ?>
+
+            <p><?php _e( 'No Our Work posts found.', 'text_domain' ); ?></p>
+
+        <?php endif; ?>
+
+    </main><!-- #main -->
+</div><!-- #primary -->
+
+<?php
+get_footer();

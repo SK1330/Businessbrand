@@ -1,0 +1,68 @@
+<?php
+/*
+Template Name: Case Studies Listing
+*/
+
+get_header();
+?>
+
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+
+        <header class="page-header">
+            <h1 class="page-title"><?php the_title(); ?></h1>
+        </header>
+
+        <div class="case-studies-list row">
+            <?php
+            $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+            $args = array(
+                'post_type'      => 'case_study',
+                'posts_per_page' => 2, // Display two case studies per page
+                'paged'          => $paged,
+                // Add any additional arguments as needed
+            );
+
+            $case_studies_query = new WP_Query( $args );
+
+            if ( $case_studies_query->have_posts() ) :
+                while ( $case_studies_query->have_posts() ) :
+                    $case_studies_query->the_post();
+                    ?>
+                    <div class="col-md-6">
+                        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                            <header class="entry-header">
+                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            </header>
+
+                            <div class="entry-content">
+                                <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                <?php the_excerpt(); ?>
+                            </div>
+                        </article>
+                    </div>
+                    <?php
+                endwhile;
+                wp_reset_postdata();
+
+                // Pagination
+                echo '<div class="pagination">';
+                echo paginate_links( array(
+                    'total'     => $case_studies_query->max_num_pages,
+                    'current'   => $paged,
+                    'prev_text' => '&laquo;',
+                    'next_text' => '&raquo;',
+                ) );
+                echo '</div>';
+            else :
+                echo '<p>No case studies found.</p>';
+            endif;
+            ?>
+        </div><!-- .case-studies-list -->
+
+    </main><!-- #main -->
+</div><!-- #primary -->
+
+<?php
+get_footer();
+?>

@@ -1,0 +1,42 @@
+<?php
+get_header('inner');
+
+// Start the loop
+while (have_posts()) : the_post();
+?>
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main our_work_single">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+                <div class="our_work_single_entry_content">
+                    <?php
+                    the_post_thumbnail('large'); // Display featured image
+                    the_content(); // Display post content
+                    ?>
+                </div><!-- .entry-content -->
+
+                <?php
+            // Get the gallery image IDs
+            $gallery_image_ids = get_gallery_image_ids();
+
+            // Output the gallery images if available
+            if (!empty($gallery_image_ids)) {
+                echo '<div class="gallery-grid-our-work-single-new">';
+                foreach ($gallery_image_ids as $image_id) {
+                    $image_url = wp_get_attachment_image_url($image_id, 'large');
+                    echo '<div class="gallery-item">';
+                    echo '<img src="' . esc_url($image_url) . '" alt="">';
+                    echo '</div>';
+                }
+                echo '</div>';
+            }
+            ?>
+
+            </article><!-- #post-<?php the_ID(); ?> -->
+        </main><!-- #main -->
+    </div><!-- #primary -->
+<?php
+endwhile;
+
+get_footer();
+?>
